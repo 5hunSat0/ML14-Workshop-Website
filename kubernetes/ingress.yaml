@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ml14-nginx-ingress
+  labels:
+    app: ml14-nginx
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: ml14-workshop-2021.yonabeshite.com
+    http:
+      paths:
+      - backend:
+          serviceName: ml14-nginx-svc
+          servicePort: 80
+  tls:
+  - hosts:
+    - ml14-workshop-2021.yonabeshite.com
+    secretName: letsencrypt-wildcard-cert

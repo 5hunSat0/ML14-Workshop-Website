@@ -1,0 +1,22 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: ml14-nginx-webpage
+spec:
+  selector:
+    matchLabels:
+      app: ml14-nginx
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: ml14-nginx
+    spec:
+      containers:
+      - name: ml14-nginx
+        image: 5hunsat0/ml14-workshop-nginx:arm-test
+        imagePullSecrets:
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: regcred

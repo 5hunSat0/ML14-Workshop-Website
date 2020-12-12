@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml14-nginx-svc
+spec:
+  selector:
+    app: ml14-nginx
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
