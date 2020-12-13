@@ -6,113 +6,105 @@ html,body,div,span,iframe,h1,h2,h3,h4,h5,p,a,img,ul,li,table,tr,th,td,tbody,foot
 	list-style: none;
 	text-decoration: none;
 }
+/* フォント指定 */
 body {
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
+/* 全体設定と背景画像の指定 */
 body {
 	width: 100%;
+	background-image: url("../images/pastel_background.jpg");
+	background-attachment: fixed;
+	background-size: cover;
 }
-#header_inner,.main_contact,#section02_inner,#company {
-	width: 960px;
-	margin: 0 auto;
-}
+/* header枠設定 */
 #header_inner {
-	height: 85px;
+	height: 100px;
 	position: relative;
 }
-#header_logo,#header_contact,#header_text {
+/* header devの共通設定 */
+#header_logo,#header_contact {
 	position: absolute;
 	top: 0;
-	bottom: 0;
+	bottom: 0px;
 	margin: auto;
 }
-#header_logo {
-	width: 194px;
-	height: 40px;
-	left: 19px;
+/* headerロゴのサイズ指定 */
+#header_logo img{
+	width: 250px;
 }
+/* headerのコンタクトdevの設定 */
 #header_contact {
-	width: 155px;
-	height: 51px;
-	right: 0;}
-#header_contact_inner {
-	display: block;
-	width: 102px;
-	height: 24px;
-	text-align: center;
-	padding: 14px 26px 13px 27px;
-	background-color: #ff0600;
-	transition: 0.4s;
+	width: 170px;
+	height: 60px;
+	right: 50px;
+	background-image: url("../images/mail-logo.png");
+	background-size: cover;	
 }
-#header_contact_inner:hover {
-	transform: scale(1.1,1.1);
-}
-#header_contact_inner p {
-	color: #fff;
-}
-#header_text {
-	width: 243px;
-	height: 29px;
-	right: 155px;
-}
-#header_text p {
-	font-size: 0.9rem;
-}
+/* header contactの文字列位置設定 */
+#header_contact p{
+	position: absolute;
+	top: 20%;
+  }
+/* main画像設定 サイズ */
 #main_image {
 	display: table;
 	width: 100%;
 	height: 482px;
 	background-size: cover;
 }
+/* main画像設定 画像指定 */
 #main_image_inner {
 	width: 100%;
 	height: 482px;
 	position: relative;
-	background: url(https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/6432841/picture_pc_e9cd48501e8ad5f03a13bfefcf9e1f19.jpg) no-repeat;
+	background: url("../images/main-image.png") no-repeat;
 	background-size:cover;
 }
-h1 {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 500px;
-	height: 85px;
-	margin: auto;
-	color: #ccc;
-	font-size: 4.3rem;
-	text-align: center;
-	display: table-cell;
-	vertical-align: middle;
+/* main画像 文字列 */
+#main_image_inner h1{
+	font-weight: bolder;
+	font-size: 50px;
+	text-shadow:1px 1px 0 #FFF,-1px 1px 0 #FFF,1px -1px 0 #FFF,-1px -1px 0 #FFF;
 }
-.scroll {
-	height: 87px;
-	width: 100%;
-	background-color: #aaa;
-	position: relative;
-	display: table;
-}
-.scroll:after {
-	content: "";
-	display: block;
-	width: 0px;
-	height: 0px;
-	bottom: -14px;
-	border-top: 43px solid #aaa;
-	border-right: 60px solid transparent;
-	border-left: 60px solid transparent;
-	left: 0;
-	right: 0;
-	margin: auto;
-	position: absolute;
-}
+
+/* キャプション */
 h2 {
-	color: #fff;
-	font-size: 1.9rem;
-	text-align: center;
+	font-size: 1.0rem;
+	background-color: rgba(256,256,256,0.8);
+	text-align: left;
 	display: table-cell;
 	vertical-align: middle;
+}
+#schedule {
+	margin: 30px;
+	height: 600px;
+	position: relative;
+	background-color: rgba(256,256,256,0.8);
+}
+#schedule h3 {
+	font-size: 2.0rem;
+	font-weight: bolder;
+}
+#schedule ul {
+	margin: 30px;
+	font-size: 1.6rem;
+	line-height: 3.2rem;
+	text-align: left;
+	vertical-align: middle;
+}
+#schedule ul li{
+    padding-left: 1em;
+    text-indent: -1em;
+}
+#agenda {
+	height: 200px;
+	position: relative;
+	background-color: white;
+}
+#agenda h3 {
+	font-size: 2.0rem;
+	font-weight: bolder;
 }
 nav {
 	height: 396px;
@@ -182,13 +174,13 @@ nav {
 	background-size: cover;
 }
 #photo01 {
-	background-image: url(https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/6432843/picture_pc_0c274de1b76f4063c7ce088be3b57004.jpg);
+	background-image: url(../images/presenter1.jpg);
 }
 #photo02 {
-	background-image: url(https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/6432845/picture_pc_3d21e88b8ee49951e3c0931173a8f8ed.jpg);
+	background-image: url(../images/presenter2.jpg);
 }
 #photo03 {
-	background-image: url(https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/6432848/picture_pc_c61a50ca0b2335d65a46645b73a2a480.jpg);
+	background-image: url(../images/presenter3.jpg);
 }
 .right {
 	float: right;
@@ -196,83 +188,29 @@ nav {
 	height: 400px;
 }
 .text {
-	background-color: #aaa;
+	background-color: #FFF;
 }
 .contents p,h4 {
 	margin: 30px 120px 0 21px;
-	color: #fff;
+	color: #000;
 }
 h4 {
 	font-size: 1.25rem;
 }
-.main_contact {
+.git_contact {
 	height: 163px;
-	background-color: #aaa;
+	background-color: rgba(256,256,256,0.8);
 	margin-bottom: 100px;
 	overflow: hidden;
 }
-.main_contact_inner {
-	width: 50%;
+.git_contact_inner p {
+	width: 100%;
 	height: 163px;
 	position: relative;
-}
-.contact_left {
-	float: left;
-}
-.contact_left_inner {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 307px;
-	height: 53px;
-	margin: auto;
-	overflow: hidden;
-}
-.contact_left_inner img {
-	float: left;
-}
-.contact_left_inner p {
-	float: right;
-	font-size: 1.4rem;
-	line-height: 20px;
+	font-size: 1.8rem;
+	line-height: 3.6rem;
 	margin: 9px 0 5px;
+	color: #FF3333;
 }
-.contact_left_inner span {
-	font-size: 0.9rem;
-}
-.contact_right {
-	float: right;
-}
-.contact_right_inner {
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 243px;
-	height: 33px;
-	margin: auto;
-	padding: 25px 85px 25px 41px;
-	background-color: #ff0600;
-	transition: 0.4s;
-}
-.contact_right_inner:hover {
-	transform: scale(1.1,1.1);
-}
-.contact_right p {
-	float: right;
-	color: #fff;
-	font-size: 1.3rem;
-}
-footer {
-	height: 93px;
-	background-color: #aaa;
-}
-footer p {
-	margin-left: 119px;
-	font-size: 0.75rem;
-	line-height: 93px;
-}
+
+
