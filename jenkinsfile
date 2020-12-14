@@ -8,7 +8,7 @@ agent any
 stages {
 stage('Cloning Git') {
 steps {
-git([url: 'https://github.com/5hunSat0/ML14-Workshop-Website', branch: 'master', credentialsId: 'jenkins'])
+git([url: 'https://github.com/5hunSat0/ML14-Workshop-Website', branch: 'main', credentialsId: 'jenkins'])
 }
 }
 stage('Building image') {
