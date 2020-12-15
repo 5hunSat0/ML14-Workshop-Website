@@ -38,7 +38,7 @@ sh "docker rmi $imagename:latest"
 stage('K8s deploy') {
 steps {
 script {
-sh 'kubectl apply -k kubernetes/. --kubeconfig $KUBECONFIG'
+sh 'kubectl -n=default apply -k kubernetes/. --kubeconfig $KUBECONFIG'
 }
 }
 }
