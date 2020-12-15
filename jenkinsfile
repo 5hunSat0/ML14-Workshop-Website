@@ -39,6 +39,7 @@ stage('K8s deploy') {
 steps {
 script {
 sh 'kubectl -n=default apply -k kubernetes/. --kubeconfig $KUBECONFIG'
+sh 'kubectl -n=default patch deployment ml14-nginx-webpage -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"dummy-for-update\":\"$(date +%s)\"}}}}}"
 }
 }
 }

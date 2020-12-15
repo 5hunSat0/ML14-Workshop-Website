@@ -11,6 +11,8 @@ spec:
     metadata:
       labels:
         app: ml14-nginx
+      annotations:
+        dummy-for-update: xxxx
     spec:
       containers:
       - name: ml14-nginx
