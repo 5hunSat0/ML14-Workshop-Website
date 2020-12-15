@@ -39,7 +39,7 @@ stage('K8s deploy') {
 steps {
 script {
 sh 'kubectl -n=default apply -k kubernetes/. --kubeconfig $KUBECONFIG'
-sh 'kubectl -n=default annotate deployment ml14-nginx-webpage dummy-for-update=$(date +%s)'
+sh 'kubectl -n=default annotate deployment ml14-nginx-webpage dummy-for-update=$(date +%s) --overwrite'
 }
 }
 }
