@@ -1,6 +1,6 @@
 pipeline {
 environment {
-imagename = "5hunsat0/ml14-workshop-nginx"
+imagename = "5hunsat0/ml14-workshop-nginx/"
 registryCredential = 'dockerhub-5hunsat0'
 dockerImage = ''
 }
