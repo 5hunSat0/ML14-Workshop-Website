@@ -42,3 +42,4 @@ sh 'kubectl apply -k kubernetes/. --kubeconfig $KUBECONFIG'
 }
 }
 }
+}
