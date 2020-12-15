@@ -15,6 +15,7 @@ spec:
       containers:
       - name: ml14-nginx
         image: 5hunsat0/ml14-workshop-nginx:latest
+        imagePullPolicy: Always
         imagePullSecrets:
         ports:
         - containerPort: 80
