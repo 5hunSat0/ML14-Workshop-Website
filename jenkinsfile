@@ -40,7 +40,7 @@ steps {
 script {
 sh 'kubectl -n=default apply -k kubernetes/. --kubeconfig $KUBECONFIG'
 sh 'sleep 10'
-sh 'kubectl -n=default annotate deployment ml14-nginx-webpage dummy-for-update=$(date +%s) --overwrite'
+sh 'kubectl -n=default annotate deployment ml14-nginx-webpage dummy-for-update=$(date +%s) --overwrite --kubeconfig $KUBECONFIG'
 }
 }
 }
