@@ -12,7 +12,8 @@ body {
 }
 /* 全体設定と背景画像の指定 */
 body {
-	width: 100%;
+	width : 100vw;
+	height: auto;
 	background-image: url("../images/pastel_background.jpg");
 	background-attachment: fixed;
 	background-size: cover;
@@ -49,13 +50,12 @@ body {
 /* main画像設定 サイズ */
 #main_image {
 	display: table;
-	width: 100%;
-	height: 482px;
+	width: 100vw;
 	background-size: cover;
 }
 /* main画像設定 画像指定 */
 #main_image_inner {
-	width: 100%;
+	width: 100vw;
 	height: 482px;
 	position: relative;
 	background: url("../images/main-image.png") no-repeat;
@@ -78,9 +78,10 @@ h2 {
 }
 #schedule {
 	margin: 30px;
-	height: 600px;
 	position: relative;
 	background-color: rgba(256,256,256,0.8);
+	text-align: left;
+	vertical-align: middle;
 }
 #schedule h3 {
 	font-size: 2.0rem;
@@ -106,62 +107,7 @@ h2 {
 	font-size: 2.0rem;
 	font-weight: bolder;
 }
-nav {
-	height: 396px;
-	width: 100%;
-	margin: 0 auto;
-}
-#main_nav {
-	width: 67.5%;
-	min-width: 687px;
-	height: 396px;
-	overflow: hidden;
-	margin: 0 auto;
-	padding: 88px 0;
-}
-#main_nav li {
-	float: left;
-	height: 225px;
-	width: 225px;
-	border: 2px solid #000;
-	border-radius: 50%;
-	position: relative;
-}
-#main_nav li:after {
-	content: "";
-	display: block;
-	position: absolute;
-	bottom: 22px;
-	right: 0;
-	left: 0;
-	width: 21px;
-	height: 21px;
-	margin: auto;
-	border-right: 3px solid #000;
-	border-bottom: 3px solid #000;
-	transform: rotate(45deg);
-}
-#main_nav li:last-of-type {
-	float: none;
-	margin: 0 auto;
-}
-#main_nav li:nth-of-type(2) {
-	float: right;
-}
-#main_nav a {
-	color: #000;
-	font-size: 1.5rem;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	border-radius: 50%;
-	text-align: center;
-	padding: 83px 0 100px;
-}
-#div03 {
-	margin-bottom: 100px;
-}
+
 .contents {
 	height: 400px;
 	overflow: hidden;
@@ -170,6 +116,13 @@ nav {
 	float: left;
 	height: 400px;
 	width: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.right {
+	float: right;
+	width: 50%;
+	height: 400px;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -182,11 +135,6 @@ nav {
 #photo03 {
 	background-image: url(../images/presenter3.jpg);
 }
-.right {
-	float: right;
-	width: 50%;
-	height: 400px;
-}
 .text {
 	background-color: #FFF;
 }
@@ -197,15 +145,16 @@ nav {
 h4 {
 	font-size: 1.25rem;
 }
+#div03 {
+	margin-bottom: 100px;
+}
 .git_contact {
-	height: 163px;
 	background-color: rgba(256,256,256,0.8);
 	margin-bottom: 100px;
 	overflow: hidden;
 }
 .git_contact_inner p {
 	width: 100%;
-	height: 163px;
 	position: relative;
 	font-size: 1.8rem;
 	line-height: 3.6rem;
