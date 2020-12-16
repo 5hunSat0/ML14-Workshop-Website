@@ -2,15 +2,16 @@
 
 ML14-研修会のWebページのソースコード。
  
-ML14-workshopのWebページは、dockerコンテナとして作成し、作者の自宅kubernetes環境で動作・公開されています。このrepositoryは、フロントエンドの知識の乏しい作者のために有志の方にいい感じのwebページにしてもらうことを目的として公開しています。
+ML14-workshopのWebページは、dockerコンテナとして作成し、作者の自宅kubernetes環境で動作・公開されています。当リポジトリのmain ブランチにpushされると、webhook経由で作者自宅のjenkinsのjobがキックされて、dockerコンテナのbuildとdocker hubへのpush、そしてkubectlによるデプロイまでが自動実行されます。
+このrepositoryは、フロントエンドの知識の乏しい作者のために有志の方にいい感じのwebページにしてもらうことを目的として公開しています。
 
 ### 使い方 / How to Use
 - **Webページの内容の変更・修正**
   - html フォルダ以下のファイル群が表示内容になります。表示内容を更新したい場合はこのフォルダ以下を変更してください
 - **アプリケーションレベルでの挙動の変更**
-  - dockerfile, kubernetesフォルダ以下を更新します。dockerfileが`dockerfile` と `dockerfile.arm` の2種類がありますが、作者の環境がx64環境でbuildしてarm環境でコンテナを動かすややこしい状態になっているためです。通常、buildして試してみる場合は、以下のdockerコマンドを実行します。
+  - dockerfile, kubernetesフォルダ以下を更新します。dockerfileが`dockerfile` と `dockerfile.test` の2種類がありますが、作者の環境がx64環境でbuildしてarm環境でコンテナを動かすややこしい状態になっているためです。通常、buildして試してみる場合は、以下のdockerコマンドを実行します。
     - container build
-      - ``` docker build -t ml14-nginx .```
+      - ``` docker build -t ml14-nginx -f dockerfile.test .```
     - container run
       - ``` docker run -d --name ml14-webpage -p 80:80 ml14-nginx ```
     - 接続確認
