@@ -1,3 +1,5 @@
+commonAnnotations:
+  dummy-for-update: dummy-annotation-value
 resources:
   - nginx-deployment.yaml
   - nginx-service.yaml
