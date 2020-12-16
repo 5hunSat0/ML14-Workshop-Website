@@ -38,7 +38,7 @@ sh "docker rmi $imagename:latest"
 stage('K8s deploy') {
 steps {
 script {
-sh 'sed -i '' "s/dummy-annotation-value/$(date +%s)/g" kubernetes/kustomization.yaml'
+sh 'sed -i "s/dummy-annotation-value/$(date +%s)/g" kubernetes/kustomization.yaml'
 sh 'kubectl -n=default apply -k kubernetes/. --kubeconfig $KUBECONFIG'
 }
 }
