@@ -15,6 +15,10 @@ btn.addEventListener("change", () => {
     // ダークモード
     document.body.classList.add("dark-theme");
 
+    // main-imageの変更
+    var mainimage = document.getElementById( "main_image_inner" );
+    mainimage.style.backgroundImage = "url('images/main-image-dark.png')";
+
     var dark1 = document.getElementById("dark1");
 		dark1.innerHTML="<h4>平賀 正樹<br>会長講話</h4><p>「さぁ、物語を始めようか」<br><ruby><rb>混沌</rb><rt>ケイオス</rt></ruby>渦巻く障がい者雇用という名の<ruby><rb>大迷宮</rb><rt>グレイト=ラビリンス</rt></ruby>。雇用率、それは我々にとっての祝福か、それとも呪いか。障がい特性の<ruby><rb>深淵</rb><rt>アヴィス</rt></ruby>の果て、そして君達は辿り着くだろう、<ruby><rb>合理的配慮のその先</rb><rt>エデン</rt></ruby>へ。今、壮大な物語の幕が上がるー！！<br></p>";
 
@@ -28,6 +32,10 @@ btn.addEventListener("change", () => {
     // ライトモード
     document.body.classList.remove("dark-theme");
     
+    // main-imageの変更
+    var mainimage = document.getElementById( "main_image_inner" );
+    mainimage.style.backgroundImage = "url('images/main-image.png')";
+
     var dark1 = document.getElementById("dark1");
     dark1.innerHTML=dark1text_normal;
 

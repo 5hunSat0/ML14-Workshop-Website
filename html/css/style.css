@@ -54,9 +54,11 @@ body.dark-theme {
 #mode_toggle {
 	position: absolute;
 	top: 90px;
+	left: 15px;
 	bottom: 0px;
-	margin: auto;
+	/*margin: auto;*/
 	font-family: 'Amatic SC', cursive;
+	font-size:20px;
 }
 
 /* headerのコンタクトdevの設定 */
@@ -79,13 +81,14 @@ body.dark-theme {
 	background-size: cover;
 }
 /* main画像設定 画像指定 */
-#main_image_inner {
+#main_image_inner{
 	width: 100vw;
 	height: 482px;
 	position: relative;
 	background: url("../images/main-image.png") no-repeat;
 	background-size:cover;
 }
+
 /* main画像 文字列 */
 #main_image_inner h1{
 	font-weight: bolder;
