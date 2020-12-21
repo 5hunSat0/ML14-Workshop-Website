@@ -1,0 +1,24 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+ name: html-update
+spec:
+ schedule: "15 * * * *"
+ jobTemplate:
+  spec:
+   template:  
+    spec:
+      containers:
+      - image: alpine/git
+        name: html-update
+        volumeMounts:
+        - name: ml14-persistent-storage
+          mountPath: /tmp
+        command: ["/bin/sh", "-c"]
+        args: ["git clone https://github.com/5hunSat0/ML14-Workshop-Website.git && cp -rf ML14-Workshop-Website/html/. /tmp/" ] 
+      restartPolicy: Never
+      volumes:
+      - name: ml14-persistent-storage
+        persistentVolumeClaim:
+          claimName: ml14-pv-claim
+      restartPolicy: OnFailure

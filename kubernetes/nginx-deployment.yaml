@@ -16,10 +16,13 @@ spec:
     spec:
       containers:
       - name: ml14-nginx
-        image: 5hunsat0/ml14-workshop-nginx:latest
-        imagePullPolicy: Always
-        imagePullSecrets:
+        image: nginx
         ports:
         - containerPort: 80
-      imagePullSecrets:
-      - name: regcred
+        volumeMounts:
+        - name: ml14-persistent-storage
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: ml14-persistent-storage
+        persistentVolumeClaim:
+          claimName: ml14-pv-claim
