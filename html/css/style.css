@@ -10,6 +10,12 @@ html,body,div,span,iframe,h1,h2,h3,h4,h5,p,a,img,ul,li,table,tr,th,td,tbody,foot
 body {
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
+
+@font-face {
+    font-family: 'Amatic SC', cursive;
+    src: url('https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet');
+}    
+
 /* 全体設定と背景画像の指定 */
 body {
 	width : 100vw;
@@ -18,10 +24,20 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 }
+
+body.dark-theme {
+	width : 100vw;
+	height: auto;
+	background-image: url("../images/dark-image.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
 /* header枠設定 */
 #header_inner {
-	height: 100px;
+	height: 120px;
 	position: relative;
+	background-color: rgba(256,256,256,0.8);
 }
 /* header devの共通設定 */
 #header_logo,#header_contact {
@@ -34,6 +50,15 @@ body {
 #header_logo img{
 	width: 250px;
 }
+
+#mode_toggle {
+	position: absolute;
+	top: 90px;
+	bottom: 0px;
+	margin: auto;
+	font-family: 'Amatic SC', cursive;
+}
+
 /* headerのコンタクトdevの設定 */
 #header_contact {
 	width: 170px;
@@ -76,7 +101,7 @@ h2 {
 	display: table-cell;
 	vertical-align: middle;
 }
-#schedule {
+#schedule{
 	margin: 30px;
 	position: relative;
 	background-color: rgba(256,256,256,0.8);
@@ -99,22 +124,23 @@ h2 {
     text-indent: -1em;
 }
 #agenda {
-	height: 200px;
+	/*height: 200px;*/
 	position: relative;
-	background-color: white;
+	
 }
 #agenda h3 {
 	font-size: 2.0rem;
 	font-weight: bolder;
+	background-color: rgba(256,256,256,0.8);
 }
 
 .contents {
-	height: 400px;
+	/*height: 400px;*/
 	overflow: hidden;
+	background-color: rgba(256,256,256,0.8);
 }
 .left {
 	float: left;
-	height: 400px;
 	width: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -122,22 +148,30 @@ h2 {
 .right {
 	float: right;
 	width: 50%;
-	height: 400px;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-#photo01 {
+.photo01 {
 	background-image: url(../images/presenter1.jpg);
+	height: 400px;
 }
 #photo02 {
 	background-image: url(../images/presenter2.jpg);
+	height: 400px;
 }
 #photo03 {
 	background-image: url(../images/presenter3.jpg);
+	height: 400px;
 }
-.text {
-	background-color: #FFF;
+
+.right text{
+	background-color: rgba(256,256,256,0.8);
 }
+
+.left text{
+	background-color: rgba(256,256,256,0.8);
+}
+
 .contents p,h4 {
 	margin: 30px 120px 0 21px;
 	color: #000;
