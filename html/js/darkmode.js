@@ -2,6 +2,8 @@
 const btn = document.querySelector("#btn-mode");
 
 // 初期テキストの取得
+var toptext = document.getElementById("toptext");
+var toptext_normal = toptext.innerHTML;
 var dark1text = document.getElementById("dark1");
 var dark1text_normal = dark1text.innerHTML;
 var dark2text = document.getElementById("dark2");
@@ -18,6 +20,9 @@ btn.addEventListener("change", () => {
     // main-imageの変更
     var mainimage = document.getElementById( "main_image_inner" );
     mainimage.style.backgroundImage = "url('images/main-image-dark.png')";
+
+    var toptext = document.getElementById("toptext");
+    toptext.innerHTML="　悠久の刻を超え、今再び邂逅する闇の使徒よ。与えられた資格を示し、その力を以って遍く領域を喰らいつくさん。<br>彼方より来し災禍は、空蝉の安寧を尽く蹂躙する。世界の様相は改変され、漆黒の濃霧が数多を侵食するだろう。求道者たちは仄暗き螺旋の塔を昇り、ついに天光満つる大伽藍へと辿り着く。<br>三方より集いし黒衣の導師は、怨嗟断絶の唄を謳う。輝く御名の元、地を這う穢れし魂よ、汝が災いを灰塵と化せと。<br>永久連鎖の終焉なき苦悩の果て、救済を告げる鐘の音が響く。聖女は祈る、古の叡智が黎明へと続く道導とならんことを。"
 
     var dark1 = document.getElementById("dark1");
 		dark1.innerHTML="<h4>平賀 正樹<br>会長講話</h4><p>「さぁ、物語を始めようか」<br><ruby><rb>混沌</rb><rt>ケイオス</rt></ruby>渦巻く障がい者雇用という名の<ruby><rb>大迷宮</rb><rt>グレイト=ラビリンス</rt></ruby>。雇用率、それは我々にとっての祝福か、それとも呪いか。障がい特性の<ruby><rb>深淵</rb><rt>アヴィス</rt></ruby>の果て、そして君達は辿り着くだろう、<ruby><rb>合理的配慮のその先</rb><rt>エデン</rt></ruby>へ。今、壮大な物語の幕が上がるー！！<br></p>";
@@ -36,13 +41,14 @@ btn.addEventListener("change", () => {
     var mainimage = document.getElementById( "main_image_inner" );
     mainimage.style.backgroundImage = "url('images/main-image.png')";
 
+    var toptext = document.getElementById("toptext");
+    toptext.innerHTML=toptext_normal;
     var dark1 = document.getElementById("dark1");
     dark1.innerHTML=dark1text_normal;
-
     var dark2 = document.getElementById("dark2");
     dark2.innerHTML=dark2text_normal;
-
     var dark3 = document.getElementById("dark3");
     dark3.innerHTML=dark3text_normal;
+
   }
 });
