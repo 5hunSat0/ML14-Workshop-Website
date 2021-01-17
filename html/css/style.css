@@ -88,7 +88,7 @@ body.dark-theme {
 	width: 100vw;
 	height: 482px;
 	position: relative;
-	background: url("../images/main-image-pc.png") no-repeat;
+	background: url("../images/main-image.png") no-repeat;
 	background-size:cover;
 }
 
