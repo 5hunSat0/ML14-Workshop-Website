@@ -44,7 +44,7 @@ btn.addEventListener("change", () => {
     
     // main-imageの変更
     var mainimage = document.getElementById( "main_image_inner" );
-    mainimage.style.backgroundImage = "url('images/main-image.png')";
+    mainimage.style.backgroundImage = "url('images/main-image-pc.png')";
 
     var scheduletext = document.getElementById("schedule");
     scheduletext.innerHTML=scheduletext_normal;

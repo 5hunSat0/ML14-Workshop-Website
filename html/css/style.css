@@ -33,23 +33,6 @@ body.dark-theme {
 	background-size: cover;
 }
 
-@media screen and (max-width: 600px) { /*ウィンドウ幅が600px以下の場合に適用*/
-	body {
-		width : 100vw;
-		height: auto;
-		background-image: url("../images/pastel_background_p.png");
-		background-attachment: fixed;
-		background-size: cover;
-	}
-	body.dark-theme {
-		width : 100vw;
-		height: auto;
-		background-image: url("../images/dark-image_p.png");
-		background-attachment: fixed;
-		background-size: cover;
-	}
-}
-
 /* header位置指定 */
 #site-header{
 	height: 120px;
@@ -107,16 +90,6 @@ body.dark-theme {
 	position: relative;
 	background: url("../images/main-image-pc.png") no-repeat;
 	background-size:cover;
-}
-
-@media screen and (max-width: 600px) { /*ウィンドウ幅が600px以下の場合に適用*/
-	#main_image_inner{
-		width: 100vw;
-		height: 482px;
-		position: relative;
-		background: url("../images/main-image.png") no-repeat;
-		background-size:cover;
-	}
 }
 
 /* main画像 文字列 */
@@ -195,21 +168,6 @@ h2 {
 #photo03 {
 	background-image: url(../images/presenter3.jpg);
 	height: 400px;
-}
-
-@media screen and (max-width: 600px) { /*ウィンドウ幅が600px以下の場合に適用*/
-	.photo01 {
-		background-image: url(../images/presenter1-p.jpg);
-		height: 400px;
-	}
-	#photo02 {
-		background-image: url(../images/presenter2-p.jpg);
-		height: 400px;
-	}
-	#photo03 {
-		background-image: url(../images/presenter3-p.jpg);
-		height: 400px;
-	}
 }
 
 .right text{
