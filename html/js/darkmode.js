@@ -21,7 +21,7 @@ btn.addEventListener("change", () => {
 
     // main-imageの変更
     var mainimage = document.getElementById( "main_image_inner" );
-    mainimage.style.backgroundImage = "url('images/main-image-dark.png')";
+    mainimage.style.backgroundImage = "url('images/main-image-dark-pc.png')";
 
     var scheduletext = document.getElementById("schedule");
     scheduletext.innerHTML='<h3>封印解除の儀</h3><ul class="liststyletype_square"><li>- 予言の日: <b>2021万年 2(デュース)月 21日 (イヴァリース歴による) (帝国建国記念日) 10:00-16:00</b></li><li>- 新生術: <b>映像リンクシェル（zoom） を使用した幻想世界－ファンタジア－開催</b></li><li>- 血の代償: <b>500インペリアル・エン</b> (<b>LINE Pay</b> にてシェュウキン(古代文字のようだ…)。<small> ※LINE Pay決済のアカシックレコードを済ませよ。初めての因果律の一篇、本人観測に三流日悠久の時を経るとの啓示。我が“主”よりの警告を見てはいかがかな？　参考:<a href="https://appllio.com/what-is-line-pay" target="_blank" rel="noopener noreferrer">LINE Pay のツクァインクァ・トゥス 超入門</a></small>)<li>- 対象者: 序列23期生/研修ルシの定めに興味のある罪知らぬ罪深き者</li><li>- 臨床心理士資格リユニオン地点登録計画</li><li>- 研修会アポカリプス直後に会食イベント(オンラインクポ)を予定。</li><li>- 研修会＜赦し＞を懇願する者、2月14日(第七ステファヌス暦による) 貴様等を滅ぼすその日までに、①神が与えたもうた使命の権化 ②隷属 ③臨床心理士資格ジョブアビリティの有無(心理士ギルド登録Code) ④会食イベント(オンラインクポ)同化の有無を記した後、下記までメイルシュトロームにて”契約”を懇願せよ。<br>契約の日の映像リンクシェルの術式や、アカシックレコードダウンロードのための情報を天啓－オラクル－する。</li><li>- 契約・問答：<a href="mailto:kenshu.psy23&#64;gmail.com">kenshu.psy23@gmail.com</a></li><li><small>by <a href="https://racing-lagoon.info/" target="_blank" rel="noopener noreferrer">ノムリッシュ翻訳</a></small></li></ul>';
