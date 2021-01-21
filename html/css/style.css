@@ -1,205 +1,411 @@
-html,body,div,span,iframe,h1,h2,h3,h4,h5,p,a,img,ul,li,table,tr,th,td,tbody,footer,header,main,nav,section {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-weight: normal;
-	list-style: none;
-	text-decoration: none;
-}
-/* フォント指定 */
-body {
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-}
-
-@font-face {
-    font-family: 'Amatic SC', cursive;
-    src: url('https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet');
-}    
-
-/* 全体設定と背景画像の指定 */
-body {
-	width : 100vw;
-	height: auto;
-	background-image: url("../images/pastel_background.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-}
-
-body.dark-theme {
-	width : 100vw;
-	height: auto;
-	background-image: url("../images/dark-image.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-}
-
-/* header位置指定 */
-#site-header{
-	height: 120px;
-	position: fixed;
-	position: relative;
-	background-color: rgba(256,256,256,0.8);
-}
-
-/* header devの共通設定 */
-#header_logo,#header_contact {
-	position: absolute;
-	top: 0;
-	bottom: 0px;
-	margin: auto;
-}
-/* headerロゴのサイズ指定 */
-#header_logo img{
-	width: 250px;
-}
-
-#mode_toggle {
-	position: absolute;
-	top: 90px;
-	left: 15px;
-	bottom: 0px;
-	/*margin: auto;*/
-	font-family: 'Amatic SC', cursive;
-	font-size:20px;
-}
-
-/* headerのコンタクトdevの設定 */
-#header_contact {
-	width: 170px;
-	height: 60px;
-	right: 50px;
-	background-image: url("../images/mail-logo.png");
-	background-size: cover;	
-}
-
-/* header contactの文字列位置設定 */
-#header_contact p{
-	position: absolute;
-	top: 20%;
-  }
-/* main画像設定 サイズ */
-#main_image {
-	display: table;
-	width: 100vw;
-	background-size: cover;
-}
-/* main画像設定 画像指定 */
-#main_image_inner{
-	width: 100vw;
-	height: 482px;
-	position: relative;
-	background: url("../images/main-image.png") no-repeat;
-	background-size:cover;
-}
-
-/* main画像 文字列 */
-#main_image_inner h1{
-	font-weight: bolder;
-	font-size: 50px;
-	text-shadow:1px 1px 0 #FFF,-1px 1px 0 #FFF,1px -1px 0 #FFF,-1px -1px 0 #FFF;
-}
-
-/* キャプション */
-h2 {
-	font-size: 1.0rem;
-	background-color: rgba(256,256,256,0.8);
-	text-align: left;
-	display: table-cell;
-	vertical-align: middle;
-}
-#schedule{
-	margin: 30px;
-	position: relative;
-	background-color: rgba(256,256,256,0.8);
-	text-align: left;
-	vertical-align: middle;
-}
-#schedule h3 {
-	font-size: 2.0rem;
-	font-weight: bolder;
-}
-#schedule ul {
-	margin: 30px;
-	font-size: 1.6rem;
-	line-height: 3.2rem;
-	text-align: left;
-	vertical-align: middle;
-}
-#schedule ul li{
-    padding-left: 1em;
-    text-indent: -1em;
-}
-#agenda {
-	/*height: 200px;*/
-	position: relative;
+/*PC用css*/
+@media screen and (min-width: 461px) { /*ウィンドウ幅が461px以上の場合に適用*/
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
 	
-}
-#agenda h3 {
-	font-size: 2.0rem;
-	font-weight: bolder;
-	background-color: rgba(256,256,256,0.8);
+	/* フォント指定 */
+	@font-face {
+		font-family: 'Amatic SC', cursive;
+		src: url('https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet');
+	}    
+	
+	@font-face {
+		font-family: 'Nemuke';
+		src: url('NemukeMedium.otf');
+	}
+	
+	/* 全体設定と背景画像の指定 */
+	body {	
+		width : 100%;
+		height: auto;
+		background-image: url("../images/pastel_background.jpg");
+		background-attachment: fixed;
+		background-size: cover;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	}
+	
+	/* 全体設定と背景画像の指定 (dark) */
+	body.dark-theme {
+		width : 100%;
+		height: auto;
+		background-image: url("../images/dark-image.jpg");
+		background-attachment: fixed;
+		background-size: cover;
+		color: white;
+		font-family: 'Nemuke';
+	}
+	
+	/* 文章背景色 */
+	body .default_background_color {
+		background-color: rgba(255,255,255,0.8);
+	}
+	
+	/* 文章背景色 (dark) */
+	body.dark-theme .default_background_color {
+		background-color: rgba(0,0,0,0.5);
+	}
+	
+	/* リンク色 */
+	a:link { color: #136FFF; }
+	a:visited { color: #CC33FF; }
+	
+	/* main 設定 */
+	main {
+		padding-top: 120px;/*header分*/
+	}
+	
+	/* header全体設定 */
+	#site_header{
+		height: 120px;
+		width: 100%;
+		position: fixed;
+		z-index: 2;
+		white-space: nowrap;
+		flex-wrap: wrap;
+		overflow: hidden;
+		display: table;
+	}
+	
+	#header_logo{
+		display: table-cell;
+		padding: 10px;
+		width: 300px;
+		background-image: url("../images/ws-logo.png");
+		background-repeat: no-repeat;
+		background-size: auto 120px;
+	}
+	
+	#mode_toggle{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 10px;
+		width: 450px;
+		font-family: 'Amatic SC', cursive;
+		font-size:20px;
+	}
+	
+	#header_contact{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 10px;
+		width: 200px;
+		background-image: url("../images/mail-logo.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 150%;
+	}
+	
+	#header_contact p{
+		text-align:center;
+	}
+	
+	/* main画像設定 画像指定 */
+	#main_image_inner{
+		width: 100vw;
+		height: 600px;
+		position: relative;
+		z-index: 0;
+		background: url("../images/main-image.png") no-repeat;
+		background-size:cover;
+	}
+	
+	/* main画像 文字列 */
+	#main_image_inner h1{
+		font-weight: bolder;
+		font-size: 50px;
+		text-shadow:1px 1px 0 #FFF,-1px 1px 0 #FFF,1px -1px 0 #FFF,-1px -1px 0 #FFF;
+	}
+	
+	/* キャプション */
+	#toptext {
+		font-size: 1.0rem;
+		text-align: left;
+		vertical-align: middle;
+	}
+	
+	#schedule{
+		margin: 30px;
+		position: relative;
+		text-align: left;
+		vertical-align: middle;
+	}
+	#schedule h3 {
+		font-size: 2.0rem;
+		font-weight: bolder;
+	}
+	#schedule ul {
+		margin: 30px;
+		font-size: 1.6rem;
+		line-height: 3.2rem;
+		text-align: left;
+		vertical-align: middle;
+	}
+	#schedule ul li{
+		padding-left: 1em;
+		text-indent: -1em;
+	}
+	
+	#agenda {
+		position: relative;
+		font-size: 2.0rem;
+		font-weight: bolder;	
+	}
+	
+	.contents {
+		overflow: hidden;
+	}
+	.left {
+		float: left;
+		width: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.right {
+		float: right;
+		width: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.contents p,h4 {
+		margin: 30px 70px 10px 20px;
+	}
+	
+	.photo01 {
+		background-image: url(../images/presenter1.jpg);
+		height: 400px;
+	}
+	#photo02 {
+		background-image: url(../images/presenter2.jpg);
+		height: 400px;
+	}
+	#photo03 {
+		background-image: url(../images/presenter3.jpg);
+		height: 400px;
+	}
+	
+	#div03 {
+		margin-bottom: 100px;
+	}
+	.git_contact {
+		margin-bottom: 100px;
+		overflow: hidden;
+	}
+	.git_contact_inner p {
+		width: 100%;
+		position: relative;
+		font-size: 1.8rem;
+		line-height: 3.6rem;
+		margin: 9px 0 5px;
+		color: #FF3333;
+	}
+
 }
 
-.contents {
-	/*height: 400px;*/
-	overflow: hidden;
-	background-color: rgba(256,256,256,0.8);
-}
-.left {
-	float: left;
-	width: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.right {
-	float: right;
-	width: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.photo01 {
-	background-image: url(../images/presenter1.jpg);
-	height: 400px;
-}
-#photo02 {
-	background-image: url(../images/presenter2.jpg);
-	height: 400px;
-}
-#photo03 {
-	background-image: url(../images/presenter3.jpg);
-	height: 400px;
-}
+/*スマホ用css*/
+@media screen and (max-width: 460px) { /*ウィンドウ幅が最大460pxまでの場合に適用*/
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	/* フォント指定 */
+	@font-face {
+		font-family: 'Amatic SC', cursive;
+		src: url('https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet');
+	}    
+	
+	@font-face {
+		font-family: 'Nemuke';
+		src: url('NemukeMedium.otf');
+	}
+	
+	/* 全体設定と背景画像の指定 */
+	body {	
+		width : 100%;
+		height: auto;
+		background-image: url("../images/pastel_background.jpg");
+		background-attachment: fixed;
+		background-size: cover;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	}
+	
+	/* 全体設定と背景画像の指定 (dark) */
+	body.dark-theme {
+		width : 100%;
+		height: auto;
+		background-image: url("../images/dark-image.jpg");
+		background-attachment: fixed;
+		background-size: cover;
+		color: white;
+		font-family: 'Nemuke';
+	}
+	
+	/* 文章背景色 */
+	body .default_background_color {
+		background-color: rgba(255,255,255,0.8);
+	}
+	
+	/* 文章背景色 (dark) */
+	body.dark-theme .default_background_color {
+		background-color: rgba(0,0,0,0.5);
+	}
+	
+	/* リンク色 */
+	a:link { color: #136FFF; }
+	a:visited { color: #CC33FF; }
+	
+	/* main 設定 */
+	main {
+		padding-top: 80px;/*header分*/
+	}
+	
+	/* header全体設定 */
+	#site_header{
+		height: 80px;
+		width: 100%;
+		position: fixed;
+		z-index: 2;
+		white-space: nowrap;
+		flex-wrap: wrap;
+		overflow: hidden;
+		display: table;
+	}
+	
+	#header_logo{
+		display: table-cell;
+		padding: 10px;
+		width: 80px;
+		background-image: url("../images/ws-logo.png");
+		background-repeat: no-repeat;
+		background-size: auto 60px;
+		background-position: 50% 50%;
+	}
+	
+	#mode_toggle{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 10px;
+		width: 50px;
+		font-family: 'Amatic SC', cursive;
+		font-size:15px;
+	}
+	
+	#header_contact{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 10px;
+		width: 80px;
+		background-image: url("../images/mail-logo.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 150%;
+		font-size:15px;
+	}
+	
+	#header_contact p{
+		text-align:center;
+	}
+	
+	/* main画像設定 画像指定 */
+	#main_image_inner{
+		width: 100vw;
+		height: 260px;
+		position: relative;
+		z-index: 0;
+		background: url("../images/main-image.png") no-repeat;
+		background-size:cover;
+	}
+	
+	/* main画像 文字列 */
+	#main_image_inner h1{
+		font-weight: bolder;
+		font-size: 24px;
+		text-shadow:1px 1px 0 #FFF,-1px 1px 0 #FFF,1px -1px 0 #FFF,-1px -1px 0 #FFF;
+	}
+	
+	/* キャプション */
+	#toptext {
+		font-size: 0.8rem;
+		text-align: left;
+		vertical-align: middle;
+	}
+	
+	#schedule{
+		margin: 15px;
+		position: relative;
+		text-align: left;
+		vertical-align: middle;
+	}
+	#schedule h3 {
+		font-size: 1.0rem;
+		font-weight: bolder;
+	}
+	#schedule ul {
+		margin: 10px;
+		font-size: 1.0rem;
+		line-height: 1.5rem;
+		text-align: left;
+		vertical-align: middle;
+	}
+	#schedule ul li{
+		padding-left: 1em;
+		text-indent: -1em;
+	}
+	
+	#agenda {
+		position: relative;
+		font-size: 1.0rem;
+		font-weight: bolder;	
+	}
+	
+	.contents {
+		overflow: hidden;
+	}
+	
+	.contents p,h4 {
+		margin: 20px 30px 5px 10px;
+		font-size: 0.8rem;
+	}
+	
+	.photo01 {
+		background-image: url(../images/presenter1.jpg);
+		width: 100%;
+		height: 150px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	#photo02 {
+		background-image: url(../images/presenter2.jpg);
+		width: 100%;
+		height: 150px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	#photo03 {
+		background-image: url(../images/presenter3.jpg);
+		width: 100%;
+		height: 150px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	
+	#div03 {
+		margin-bottom: 100px;
+	}
+	.git_contact {
+		margin-bottom: 100px;
+		overflow: hidden;
+	}
+	.git_contact_inner p {
+		width: 100%;
+		position: relative;
+		font-size: 0.8rem;
+		line-height: 1.2rem;
+		margin: 9px 0 5px;
+		color: #FF3333;
+	}
 
-.right text{
-	background-color: rgba(256,256,256,0.8);
 }
-
-.left text{
-	background-color: rgba(256,256,256,0.8);
-}
-
-.contents p,h4 {
-	margin: 30px 70px 10px 20px;
-	color: #000;
-}
-h4 {
-	font-size: 1.25rem;
-}
-#div03 {
-	margin-bottom: 100px;
-}
-.git_contact {
-	background-color: rgba(256,256,256,0.8);
-	margin-bottom: 100px;
-	overflow: hidden;
-}
-.git_contact_inner p {
-	width: 100%;
-	position: relative;
-	font-size: 1.8rem;
-	line-height: 3.6rem;
-	margin: 9px 0 5px;
-	color: #FF3333;
-}
-
-
